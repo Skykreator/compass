@@ -32,7 +32,7 @@ script.on_event(defines.events.on_gui_click, function(event)
             myinfo = 1
             event.element.sprite = "yes4"
             event.element.tooltip = "Careful Icarus"
-            if num < 5 then
+            if num < 2 then
                 myinfo = 2
                 event.element.sprite = "no4"
                 event.element.tooltip = "Infinite Compass.... but no compass"
