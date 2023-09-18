@@ -20,8 +20,6 @@ script.on_event(defines.events.on_player_created, function(event)
     button.style.bottom_padding = 0
     button.style.right_padding = 0
     button.style.left_padding = 0
-    
-    --TODO -> when clicked chance to replace with different image
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)
