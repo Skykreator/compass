@@ -1,4 +1,5 @@
 local myinfo = 0
+local icarus = 0
 
 script.on_event(defines.events.on_player_created, function(event)
     local new_player = game.players[event.player_index]
@@ -28,11 +29,12 @@ script.on_event(defines.events.on_gui_click, function(event)
         myinfo = 0
         event.element.sprite = "compass128"
         event.element.tooltip = "Click to Enlarge"
-        if num < 50 then
+        if num < event.element.style.natural_width / 8 and not (myinfo == 1) then
             myinfo = 1
+            icarus = icarus + 1
             event.element.sprite = "yes4"
             event.element.tooltip = "Careful Icarus"
-            if num < 2 then
+            if num < 2 + event.element.style.natural_width / 32 and event.element.style.natural_width > 129 and icarus > 1 then
                 myinfo = 2
                 event.element.sprite = "no4"
                 event.element.tooltip = "Infinite Compass.... but no compass"

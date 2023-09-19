@@ -30,7 +30,7 @@ poopFuel.icon = "__compass__/graphics/compressedpoop.png"
 local poopFuelRecipe = table.deepcopy(data.raw["recipe"]["small-electric-pole"])
 poopFuelRecipe.enabled = true
 poopFuelRecipe.name = "cmps-compressed-poop"
-poopFuelRecipe.ingredients = {{"poop",5}}
+poopFuelRecipe.ingredients = {{"cmps-poop",5}}
 poopFuelRecipe.result = "cmps-compressed-poop"
 poopFuelRecipe.energy_required = 3
 
