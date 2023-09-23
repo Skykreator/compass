@@ -1,7 +1,7 @@
 local myinfo = 0
 local icarus = 0
 
-script.on_event(defines.events.on_player_created, function(event)
+script.on_event(defines.events.on_player_joined_game, function(event)
     local new_player = game.players[event.player_index]
     local lGui = new_player.gui.left
     local button = lGui.add{
