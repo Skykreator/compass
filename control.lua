@@ -4,23 +4,26 @@ local icarus = 0
 script.on_event(defines.events.on_player_joined_game, function(event)
     local new_player = game.players[event.player_index]
     local lGui = new_player.gui.left
-    local button = lGui.add{
-        type = "sprite-button",
-        tooltip = "Click to Enlarge",
-        name = "compass",
-        sprite = "compass128",
-    }
-    button.style.horizontally_stretchable = "on"
-    button.style.vertically_stretchable = "on"
-    button.style.natural_width = 33
-    button.style.natural_height = 33
-    button.style.maximal_width = 8191
-    button.style.maximal_height = 8191
+    if lGui.compass == nil then
+        local button = lGui.add{
+            type = "sprite-button",
+            tooltip = "Click to Enlarge",
+            name = "compass",
+            sprite = "compass128",
+        
+        }
+    end
+    lGui.compass.style.horizontally_stretchable = "on"
+    lGui.compass.style.vertically_stretchable = "on"
+    lGui.compass.style.natural_width = 33
+    lGui.compass.style.natural_height = 33
+    lGui.compass.style.maximal_width = 8191
+    lGui.compass.style.maximal_height = 8191
 
-    button.style.top_padding = 0
-    button.style.bottom_padding = 0
-    button.style.right_padding = 0
-    button.style.left_padding = 0
+    lGui.compass.style.top_padding = 0
+    lGui.compass.style.bottom_padding = 0
+    lGui.compass.style.right_padding = 0
+    lGui.compass.style.left_padding = 0
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)
