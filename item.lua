@@ -9,7 +9,7 @@ local poop = table.deepcopy(data.raw["ammo"]["shotgun-shell"])
 poop.name = "cmps-poop"
 poop.ammo_type.category="cmps-poop-shell"
 poop.ammo_type.magazine_size=50
-poop.icon = "__compass__/graphics/poop.png"
+poop.icon = "__better_compass__/graphics/poop.png"
 
 local poopRecipe = table.deepcopy(data.raw["recipe"]["shotgun-shell"])
 poopRecipe.enabled = true
@@ -25,7 +25,7 @@ poopFuel.name = "cmps-compressed-poop"
 poopFuel.fuel_value = "10MJ"
 poopFuel.fuel_acceleration_multiplier = 1.3
 poopFuel.fuel_top_speed_multiplier = 1.08
-poopFuel.icon = "__compass__/graphics/compressedpoop.png"
+poopFuel.icon = "__better_compass__/graphics/compressedpoop.png"
 
 local poopFuelRecipe = table.deepcopy(data.raw["recipe"]["small-electric-pole"])
 poopFuelRecipe.enabled = true
